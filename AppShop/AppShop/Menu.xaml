@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Shell xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"       
+             xmlns:views="clr-namespace:AppShop.Views"
+             x:Class="AppShop.Menu">
+
+    <Shell.FlyoutHeader>
+        <Grid Padding="0, 32" ColumnDefinitions="1*,2*" RowDefinitions="Auto, Auto" BackgroundColor="{StaticResource PrimaryColor}">
+            <Image Source="loginlogo" Grid.RowSpan="2"/>
+
+            <Label Text="Banco vindo ao" Grid.Column="1" Style="{StaticResource MenuHeaderLabel}"/>
+            <Image Source="resposta01" HorizontalOptions="Start" Grid.Column="1" Grid.Row="1"/>
+        </Grid>
+    </Shell.FlyoutHeader>
+    <FlyoutItem Title="Principais" FlyoutDisplayOptions="AsMultipleItems">
+        <ShellContent Title="Lojas" Icon="cartao" ContentTemplate="{ DataTemplate views:Store }"/>
+        <ShellContent Title="Lojas 1" Icon="pix" ContentTemplate="{ DataTemplate views:Store }"/>
+        <ShellContent Title="Lojas 2" Icon="resposta01" ContentTemplate="{ DataTemplate views:Store }"/>
+    </FlyoutItem>
+    <ShellContent Title="Abaixo" Icon="resposta01" ContentTemplate="{ DataTemplate views:Store }"/>
+    <ShellContent Title="Abaixo 1" Icon="resposta02" ContentTemplate="{ DataTemplate views:Store }"/>
+    <ShellContent Title="Abaixo 2" Icon="resposta03" ContentTemplate="{ DataTemplate views:Store }"/>
+</Shell>
