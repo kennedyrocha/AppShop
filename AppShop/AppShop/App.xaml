@@ -18,6 +18,7 @@
                 <Setter Property="Shell.UnselectedColor" Value="{StaticResource Black }"/>
             </Style>
             <Style TargetType="FlyoutItem" BasedOn="{StaticResource FlyoutBaseStyle}"/>
+            <Style TargetType="ShellContent" BasedOn="{StaticResource FlyoutBaseStyle}"/>
 
             <Style TargetType="ContentPage" ApplyToDerivedTypes="True">
                 <Setter Property="BackgroundColor" Value="{StaticResource White}"/>
@@ -28,6 +29,19 @@
                 <Setter Property="FontSize" Value="12"/>
                 <Setter Property="TextColor" Value="White"/>
             </Style>
+
+            <Style TargetType="Button" x:Key="PrimaryButton">
+                <Setter Property="FontSize" Value="18"/>
+                <Setter Property="TextColor" Value="Black"/>
+                <Setter Property="BackgroundColor" Value="#FFFFFF"/>
+                <Setter Property="BorderColor" Value="#707070"/>
+            </Style>
+
+            <Style TargetType="Label" x:Key="EstablishmentType">
+                <Setter Property="FontSize" Value="18"/>
+                <Setter Property="TextColor" Value="Black"/>
+            </Style>
+            <Style TargetType="Label" x:Key="EstablishmentName"/>
         </ResourceDictionary>
     </Application.Resources>
 </Application>

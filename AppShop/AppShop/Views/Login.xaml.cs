@@ -1,4 +1,5 @@
-﻿using System;
+﻿using AppShop.ViewModels;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -7,16 +8,17 @@ using System.Threading.Tasks;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
-namespace AppShop
+namespace AppShop.Views
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class Menu : Shell
+    public partial class Login : ContentPage
     {
-        public Menu()
+        public Login()
         {
             InitializeComponent();
 
-            Routing.RegisterRoute("establishment/detail", typeof(Views.EstablishmentDetail));
+            BindingContext = new LoginViewModel();
+            Routing.RegisterRoute("menu", typeof(AppShop.Menu));
         }
     }
 }

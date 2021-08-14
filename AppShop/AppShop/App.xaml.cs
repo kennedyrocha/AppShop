@@ -10,7 +10,14 @@ namespace AppShop
         {
             InitializeComponent();
 
-            MainPage = new Menu();
+            Device.SetFlags(new string[] { "Shapes_Experimental" });
+
+            MainPage = new AppShop.Views.Login();
+        }
+
+        public static void NavegarParaPaginaInicial()
+        {
+            App.Current.MainPage = new Menu();
         }
 
         protected override void OnStart()

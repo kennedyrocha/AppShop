@@ -15,9 +15,9 @@
     <FlyoutItem Title="Principais" FlyoutDisplayOptions="AsMultipleItems">
         <ShellContent Title="Lojas" Icon="cartao" ContentTemplate="{ DataTemplate views:Store }"/>
         <ShellContent Title="Lojas 1" Icon="pix" ContentTemplate="{ DataTemplate views:Store }"/>
-        <ShellContent Title="Lojas 2" Icon="resposta01" ContentTemplate="{ DataTemplate views:Store }"/>
     </FlyoutItem>
     <ShellContent Title="Abaixo" Icon="resposta01" ContentTemplate="{ DataTemplate views:Store }"/>
     <ShellContent Title="Abaixo 1" Icon="resposta02" ContentTemplate="{ DataTemplate views:Store }"/>
     <ShellContent Title="Abaixo 2" Icon="resposta03" ContentTemplate="{ DataTemplate views:Store }"/>
+    <ShellContent Title="Detalhe" Icon="resposta03" ContentTemplate="{ DataTemplate views:EstablishmentDetail }"/>
 </Shell>
