@@ -5,19 +5,12 @@
              x:Class="AppShop.Menu">
 
     <Shell.FlyoutHeader>
-        <Grid Padding="0, 32" ColumnDefinitions="1*,2*" RowDefinitions="Auto, Auto" BackgroundColor="{StaticResource PrimaryColor}">
-            <Image Source="loginlogo" Grid.RowSpan="2"/>
-
-            <Label Text="Banco vindo ao" Grid.Column="1" Style="{StaticResource MenuHeaderLabel}"/>
-            <Image Source="resposta01" HorizontalOptions="Start" Grid.Column="1" Grid.Row="1"/>
+        <Grid BackgroundColor="#5CBCC4" ColumnDefinitions="1*,1*" Padding="20">
+            <Image Source="logo" Margin="10" HeightRequest="30" HorizontalOptions="Start"/>
+            <Label Text="Bem Vindo!" Grid.Column="1" TextColor="White" FontSize="18" VerticalOptions="Center" HorizontalOptions="Start"/>
         </Grid>
     </Shell.FlyoutHeader>
-    <FlyoutItem Title="Principais" FlyoutDisplayOptions="AsMultipleItems">
-        <ShellContent Title="Lojas" Icon="cartao" ContentTemplate="{ DataTemplate views:Store }"/>
-        <ShellContent Title="Lojas 1" Icon="pix" ContentTemplate="{ DataTemplate views:Store }"/>
-    </FlyoutItem>
-    <ShellContent Title="Abaixo" Icon="resposta01" ContentTemplate="{ DataTemplate views:Store }"/>
-    <ShellContent Title="Abaixo 1" Icon="resposta02" ContentTemplate="{ DataTemplate views:Store }"/>
-    <ShellContent Title="Abaixo 2" Icon="resposta03" ContentTemplate="{ DataTemplate views:Store }"/>
+    <ShellContent Title="Planos" ContentTemplate="{ DataTemplate views:Plano }"/>
+    <ShellContent Title="Meus Dados" ContentTemplate="{ DataTemplate views:Cliente }"/>
     <ShellContent Title="Detalhe" Icon="resposta03" ContentTemplate="{ DataTemplate views:EstablishmentDetail }"/>
 </Shell>

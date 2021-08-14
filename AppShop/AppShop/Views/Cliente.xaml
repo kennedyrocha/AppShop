@@ -1,0 +1,67 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:viewModels="clr-namespace:AppShop.ViewModels"
+             x:Class="AppShop.Views.Cliente">
+    
+    <ContentPage.BindingContext>
+        <viewModels:ClienteViewModel/>
+    </ContentPage.BindingContext>
+
+    <Shell.TitleView>
+        <ContentView>
+            <Image Source="logo" HorizontalOptions="Start" VerticalOptions="Center" HeightRequest="30"/>
+        </ContentView>
+    </Shell.TitleView>
+
+    <ContentPage.Content>
+        <StackLayout>
+
+            <Frame BackgroundColor="#5CBCC4">
+                <Label Text="CADASTRO" TextColor="White" FontSize="25" FontAttributes="Bold" HorizontalOptions="Start" VerticalOptions="Center" HeightRequest="30"/>
+            </Frame>
+            <ScrollView>
+                <StackLayout Margin="40, 30, 40, 0">
+                    <Label Text=" Nome" FontSize="15" TextColor="Black"  FontAttributes="Bold"/>
+                    <Entry Text="{Binding Cliente.Nome}" Placeholder="Digite seu nome complento" PlaceholderColor="Gray" FontSize="15"/>
+                    
+                    <Label Text=" Telefone" FontSize="15" TextColor="Black" Margin="0, 15, 0, 0" FontAttributes="Bold"/>
+                    <Entry Text="{Binding Cliente.Telefone}" Keyboard="Telephone" Placeholder="(99) 99999-9999" PlaceholderColor="Gray" FontSize="15"/>
+                    
+                    <Label Text=" Email" FontSize="15" TextColor="Black" Margin="0, 15, 0, 0" FontAttributes="Bold"/>
+                    <Entry Text="{Binding Cliente.Email}" Keyboard="Email" Placeholder="Insira seu endereço de email" PlaceholderColor="Gray" FontSize="15"/>
+                    
+                    <Label Text=" Tipo Sanguíneo" FontSize="15" TextColor="Black" Margin="0, 15, 0, 0" FontAttributes="Bold"/>
+                    <Picker SelectedItem="{Binding Cliente.TipoSanquineo}" ItemsSource="{Binding ListaTipoSanguineo}" Title="Selecione o tipo sanguíneo" FontSize="15"/>
+                    
+                    <Label Text=" Altura" FontSize="15" TextColor="Black" Margin="0, 15, 0, 0" FontAttributes="Bold"/>
+                    <Entry Text="{Binding Cliente.Altura}" Keyboard="Numeric" Placeholder="Qual sua Altura?" PlaceholderColor="Gray" FontSize="15"/>
+                    
+                    <Label Text=" Idade" FontSize="15" TextColor="Black" Margin="0, 15, 0, 0" FontAttributes="Bold"/>
+                    <Entry Text="{Binding Cliente.Idade}" Keyboard="Numeric" Placeholder="Quantos anos você tem?" PlaceholderColor="Gray" FontSize="15"/>
+                    
+                    <Label Text=" Peso" FontSize="15" TextColor="Black" Margin="0, 15, 0, 0" FontAttributes="Bold"/>
+                    <Entry Text="{Binding Cliente.Peso}" Keyboard="Numeric" Placeholder="Quanto você pesa?" PlaceholderColor="Gray" FontSize="15"/>
+                    
+                    <Label Text=" Medicações e Suplementos que utiliza" FontSize="15" TextColor="Black" Margin="0, 15, 0, 0" FontAttributes="Bold"/>
+                    <Editor Text="{Binding Cliente.MedicacoesSuplmentos}" HeightRequest="70" Placeholder="Você utiliza algum tipo de medicamento? Qual?" PlaceholderColor="Gray" FontSize="15"/>
+                    
+                    <Label Text=" Distúrbios de Saúde" FontSize="15" TextColor="Black" Margin="0, 15, 0, 0" FontAttributes="Bold"/>
+                    <Editor Text="{Binding Cliente.DisturbioSaude}" HeightRequest="70" Placeholder="Quais disturbios você lida hoje?" PlaceholderColor="Gray" FontSize="15"/>
+
+
+                    <Button Command="{Binding SubmitCommand}" Text="Cadastrar"
+                    FontAttributes="Bold"
+                    FontSize="20"
+                    HeightRequest="50"
+                    WidthRequest="150"
+                    HorizontalOptions="End"
+                    TextColor="White"
+                    BackgroundColor="#5CBCC4"
+                    BorderRadius="6"
+                    Margin="0,20,0,20"/>
+                </StackLayout>
+            </ScrollView>
+        </StackLayout>        
+    </ContentPage.Content>
+</ContentPage>

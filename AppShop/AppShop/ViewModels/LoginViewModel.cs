@@ -1,4 +1,6 @@
-﻿using MvvmHelpers.Commands;
+﻿using Android.Content.Res;
+using AppShop.Views;
+using MvvmHelpers.Commands;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -11,7 +13,9 @@ namespace AppShop.ViewModels
     public class LoginViewModel : INotifyPropertyChanged
     {
         public Action ExibirAvisoDeLoginInvalido;
+
         public event PropertyChangedEventHandler PropertyChanged = delegate { };
+
         private string email;
         public string Email
         {
@@ -36,12 +40,20 @@ namespace AppShop.ViewModels
         public LoginViewModel()
         {
             SubmitCommand = new Xamarin.Forms.Command(OnSubmit);
+            CreateUser = new Xamarin.Forms.Command(Create);
         }
         public void OnSubmit()
         {
             Application.Current.MainPage = new Menu();
             //Shell.Current.GoToAsync("menu"); ;
             App.NavegarParaPaginaInicial();
+        }
+        public ICommand CreateUser { protected set; get; }
+        public void Create()
+        {
+            Application.Current.MainPage = new Cliente();
+            //Shell.Current.GoToAsync("menu"); ;
+            App.NavegarParaPaginaCadastro();
         }
     }
 }

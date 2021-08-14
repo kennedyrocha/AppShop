@@ -7,7 +7,7 @@
 
     <Shell.TitleView>
         <ContentView>
-            <Image Source="loginlogo" HorizontalOptions="Start" VerticalOptions="Center" HeightRequest="30"/>
+            <Image Source="logo" HorizontalOptions="Start" VerticalOptions="Center" HeightRequest="30"/>
         </ContentView>
     </Shell.TitleView>
     <ContentPage.BindingContext>

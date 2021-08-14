@@ -11,8 +11,8 @@
             <Color x:Key="TextSecondColor">#A0A0A0</Color>
 
             <Style TargetType="Element" x:Key="FlyoutBaseStyle">
-                <Setter Property="Shell.BackgroundColor" Value="{StaticResource White}"/>
-                <Setter Property="Shell.ForegroundColor" Value="{StaticResource PrimaryColor}"/>
+                <Setter Property="Shell.BackgroundColor" Value="{StaticResource PrimaryColor}"/>
+                <Setter Property="Shell.ForegroundColor" Value="{StaticResource White}"/>
                 <Setter Property="Shell.NavBarHasShadow" Value="False"/>
                 <Setter Property="Shell.TitleColor" Value="{StaticResource PrimaryColor }"/>
                 <Setter Property="Shell.UnselectedColor" Value="{StaticResource Black }"/>

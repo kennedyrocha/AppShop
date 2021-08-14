@@ -1,4 +1,5 @@
-﻿using System;
+﻿using AppShop.ViewModels;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -7,17 +8,14 @@ using System.Threading.Tasks;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
-namespace AppShop
+namespace AppShop.Views
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class Menu : Shell
+    public partial class PlanoBuy : ContentPage
     {
-        public Menu()
+        public PlanoBuy()
         {
             InitializeComponent();
-
-            Routing.RegisterRoute("establishment/detail", typeof(Views.EstablishmentDetail));
-            Routing.RegisterRoute("plano/buy", typeof(Views.PlanoBuy));
         }
     }
 }
