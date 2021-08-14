@@ -16,7 +16,6 @@ namespace AppShop
         {
             InitializeComponent();
 
-            Routing.RegisterRoute("establishment/detail", typeof(Views.EstablishmentDetail));
             Routing.RegisterRoute("plano/buy", typeof(Views.PlanoBuy));
         }
     }

@@ -10,7 +10,6 @@
             <Label Text="Bem Vindo!" Grid.Column="1" TextColor="White" FontSize="18" VerticalOptions="Center" HorizontalOptions="Start"/>
         </Grid>
     </Shell.FlyoutHeader>
-    <ShellContent Title="Planos" ContentTemplate="{ DataTemplate views:Plano }"/>
-    <ShellContent Title="Meus Dados" ContentTemplate="{ DataTemplate views:Cliente }"/>
-    <ShellContent Title="Detalhe" Icon="resposta03" ContentTemplate="{ DataTemplate views:EstablishmentDetail }"/>
+    <ShellContent Title="Planos" Icon="baseline_layers" ContentTemplate="{ DataTemplate views:Plano }"/>
+    <ShellContent Title="Meus Dados" Icon="baseline_person" ContentTemplate="{ DataTemplate views:Cliente }"/>
 </Shell>
